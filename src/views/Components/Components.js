@@ -27,25 +27,25 @@ import SectionCompletedExamples from "./Sections/SectionCompletedExamples.js";
 import SectionLogin from "./Sections/SectionLogin.js";
 import SectionExamples from "./Sections/SectionExamples.js";
 import SectionDownload from "./Sections/SectionDownload.js";
-import Favorite from "@material-ui/icons/Favorite";
+
 import styles from "assets/jss/material-kit-react/views/components.js";
 import CustomTabs from "../../components/CustomTabs/CustomTabs";
+
 const useStyles = makeStyles(styles);
 
 export default function Components(props) {
   const classes = useStyles();
   const { ...rest } = props;
-
   return (
     <div>
       <Header
-        brand="Healing Energy Reiki Usui"
+        brand="Material Kit React"
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"
         changeColorOnScroll={{
           height: 400,
-          color: "primary",
+          color:"default",
         }}
         {...rest}
       />
@@ -56,8 +56,8 @@ export default function Components(props) {
               <div className={classes.brand}>
                 <h1 className={classes.title}> Healing Energy Reiki Usui </h1>
                 <h3 className={classes.subtitle}>
-                  Ici c'est votre adresse bien-être. Namasté.{" "}
-                  <Favorite className={classes.icons} />
+                  Ici c'est votre adresse bien-être.
+                  Namasté. ♡
                 </h3>
               </div>
             </GridItem>
@@ -67,6 +67,24 @@ export default function Components(props) {
 
       <div className={classNames(classes.main, classes.mainRaised)}>
         <SectionBasics />
+        <SectionNavbars />
+        <SectionTabs />
+        <SectionPills />
+        <SectionNotifications />
+        <SectionTypography />
+        <SectionJavascript />
+        <SectionCarousel />
+        <SectionCompletedExamples />
+        <SectionLogin />
+        <GridItem md={12} className={classes.textCenter}>
+          <Link to={"/login-page"} className={classes.link}>
+            <Button color="primary" size="lg" simple>
+              View Login Page
+            </Button>
+          </Link>
+        </GridItem>
+        <SectionExamples />
+        <SectionDownload />
       </div>
       <Footer />
     </div>
