@@ -273,7 +273,7 @@ $headings-margin-bottom: ($spacer / 2) !default;
 $headings-font-family: inherit !default;
 $headings-font-weight: 500 !default;
 $headings-line-height: 1.2 !default;
-$headings-color: inherit !default;
+$headings-color: $deep-orange-400;
 
 $display1-size: 6rem !default;
 $display2-size: 5.5rem !default;
@@ -623,7 +623,7 @@ $nav-tabs-border-width: $border-width !default;
 $nav-tabs-border-radius: $border-radius !default;
 $nav-tabs-link-hover-border-color: $gray-200 $gray-200 $nav-tabs-border-color !default;
 $nav-tabs-link-active-color: $gray-700 !default;
-$nav-tabs-link-active-bg: $body-bg !default;
+$nav-tabs-link-active-bg: $deep-orange-400!default;
 $nav-tabs-link-active-border-color: $gray-300 $gray-300 $nav-tabs-link-active-bg !default;
 
 $nav-pills-border-radius: $border-radius !default;
@@ -747,15 +747,15 @@ $tooltip-arrow-color: $tooltip-bg !default;
 // Popovers
 
 $popover-font-size: $font-size-sm !default;
-$popover-bg: $white !default;
+$popover-bg: $deep-orange-400 ;
 $popover-max-width: 276px !default;
 $popover-border-width: $border-width !default;
 $popover-border-color: rgba($black, 0.2) !default;
 $popover-border-radius: $border-radius-lg !default;
 $popover-box-shadow: 0 0.25rem 0.5rem rgba($black, 0.2) !default;
 
-$popover-header-bg: darken($popover-bg, 3%) !default;
-$popover-header-color: $headings-color !default;
+$popover-header-bg: $deep-orange-400 ;
+$popover-header-color: $deep-orange-400;
 $popover-header-padding-y: 0.5rem !default;
 $popover-header-padding-x: 0.75rem !default;
 

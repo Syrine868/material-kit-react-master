@@ -121,7 +121,8 @@ Header.propTypes = {
     "transparent",
     "white",
     "rose",
-    "dark"
+    "dark",
+      "test"
   ]),
   rightLinks: PropTypes.node,
   leftLinks: PropTypes.node,
@@ -145,7 +146,8 @@ Header.propTypes = {
       "transparent",
       "white",
       "rose",
-      "dark"
+      "dark",
+        "test"
     ]).isRequired
   })
 };

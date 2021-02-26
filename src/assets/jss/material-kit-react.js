@@ -76,6 +76,7 @@ const successColor = "#4caf50";
 const infoColor = "#00acc1";
 const roseColor = "#e91e63";
 const grayColor = "#999999";
+const test="#9999fb";
 
 const primaryBoxShadow = {
   boxShadow:
@@ -195,6 +196,7 @@ export {
   infoColor,
   roseColor,
   grayColor,
+    test,
   primaryBoxShadow,
   infoBoxShadow,
   successBoxShadow,
@@ -213,5 +215,5 @@ export {
   title,
   cardTitle,
   cardLink,
-  cardSubtitle
+  cardSubtitle,
 };
