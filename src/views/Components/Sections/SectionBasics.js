@@ -26,7 +26,12 @@ import styles from "assets/jss/material-kit-react/views/componentsSections/basic
 import {Card} from "@material-ui/core";
 import CardBody from "../../../components/Card/CardBody";
 import CardFooter from "../../../components/Card/CardFooter";
+import CustomTabs from "../../../components/CustomTabs/CustomTabs";
+import Face from "@material-ui/icons/Face";
+import Chat from "@material-ui/icons/Chat";
+import Build from "@material-ui/icons/Build";
 
+import image from "assets/img/LOGO QUAD.png";
 const useStyles = makeStyles(styles);
 
 export default function SectionBasics() {
@@ -35,391 +40,71 @@ export default function SectionBasics() {
     const [selectedEnabled, setSelectedEnabled] = React.useState("b");
     const [checkedA, setCheckedA] = React.useState(true);
     const [checkedB, setCheckedB] = React.useState(false);
-    React.useEffect(() => {
-        if (
-            !document
-                .getElementById("sliderRegular")
-                .classList.contains("noUi-target")
-        ) {
-            Slider.create(document.getElementById("sliderRegular"), {
-                start: [40],
-                connect: [true, false],
-                step: 1,
-                range: {min: 0, max: 100}
-            });
-        }
-        if (
-            !document.getElementById("sliderDouble").classList.contains("noUi-target")
-        ) {
-            Slider.create(document.getElementById("sliderDouble"), {
-                start: [20, 60],
-                connect: [false, true, false],
-                step: 1,
-                range: {min: 0, max: 100}
-            });
-        }
-        return function cleanup() {
-        };
-    });
-    const handleToggle = value => {
-        const currentIndex = checked.indexOf(value);
-        const newChecked = [...checked];
 
-        if (currentIndex === -1) {
-            newChecked.push(value);
-        } else {
-            newChecked.splice(currentIndex, 1);
-        }
-        setChecked(newChecked);
-    };
+
     return (
-        <div className={classes.sections}>
-            <div className={classes.container}>
-                <div className={classes.title}>
-                    <h2>A propos</h2>
-                    <hr/>
-                    <p>Reiki, soins énergétiques, Yoga du rire,
-                        danse thérapie, art thérapie, coaching de vie, EFT lithothérapie, réflexologie...
-                        Ici c'est votre adresse bien-être! ♡ Namasté.♡
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure ratione rerum tempore voluptatum!
-                        Ab accusamus commodi debitis ducimus eveniet excepturi exercitationem, fugiat minima non quidem
-                        sed tempore, ullam veniam voluptate.
-                    </p>
-                </div>
-                <div className={classes.space50}/>
-                <div id="inputs">
-                    <div className={classes.title}>
-                        <h2>Services</h2>
-                        <hr/>
-                        <h3>Coaching</h3>
-                        <Card >
-                            <CardBody >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti eos incidunt
-                                minus reiciendis ullam. Debitis, eius eligendi enim exercitationem hic minima modi nemo,
-                                nihil non optio saepe ullam! Repellendus, tenetur!</CardBody>
-                            <CardFooter><Button>Réserver</Button></CardFooter>
-                        </Card>
-                    </div>
-                    <GridContainer>
-
-                        <GridItem xs={12} sm={4} md={4} lg={3}>
-                            <CustomInput
-                                labelText="With floating label"
-                                id="float"
-                                formControlProps={{
-                                    fullWidth: true
-                                }}
-                            />
-                        </GridItem>
-                        <GridItem xs={12} sm={4} md={4} lg={3}>
-                            <CustomInput
-                                labelText="Success input"
-                                id="success"
-                                success
-                                formControlProps={{
-                                    fullWidth: true
-                                }}
-                            />
-                        </GridItem>
-                        <GridItem xs={12} sm={4} md={4} lg={3}>
-                            <CustomInput
-                                labelText="Error input"
-                                id="error"
-                                error
-                                formControlProps={{
-                                    fullWidth: true
-                                }}
-                            />
-                        </GridItem>
-                        <GridItem xs={12} sm={4} md={4} lg={3}>
-                            <CustomInput
-                                labelText="With material Icons"
-                                id="material"
-                                formControlProps={{
-                                    fullWidth: true
-                                }}
-                                inputProps={{
-                                    endAdornment: (
-                                        <InputAdornment position="end">
-                                            <People/>
-                                        </InputAdornment>
-                                    )
-                                }}
-                            />
-                        </GridItem>
-                        <GridItem xs={12} sm={4} md={4} lg={3}>
-                            <CustomInput
-                                labelText="With Font Awesome Icons"
-                                id="font-awesome"
-                                formControlProps={{
-                                    fullWidth: true
-                                }}
-                                inputProps={{
-                                    endAdornment: (
-                                        <InputAdornment position="end">
-                                            <i className="fas fa-users"/>
-                                        </InputAdornment>
-                                    )
-                                }}
-                            />
-                        </GridItem>
-                    </GridContainer>
-                </div>
-                <div className={classes.space70}/>
-                <div id="checkRadios">
-                    <GridContainer>
-                        <GridItem xs={12} sm={6} md={4} lg={3}>
-                            <div className={classes.title}>
-                                <h3>Checkboxes</h3>
-                            </div>
-                            <div
-                                className={
-                                    classes.checkboxAndRadio +
-                                    " " +
-                                    classes.checkboxAndRadioHorizontal
-                                }
-                            >
-                                <FormControlLabel
-                                    control={
-                                        <Checkbox
-                                            tabIndex={-1}
-                                            onClick={() => handleToggle(21)}
-                                            checkedIcon={<Check className={classes.checkedIcon}/>}
-                                            icon={<Check className={classes.uncheckedIcon}/>}
-                                            classes={{
-                                                checked: classes.checked,
-                                                root: classes.checkRoot
-                                            }}
-                                        />
-                                    }
-                                    classes={{label: classes.label, root: classes.labelRoot}}
-                                    label="Unchecked"
-                                />
-                            </div>
-                            <div
-                                className={
-                                    classes.checkboxAndRadio +
-                                    " " +
-                                    classes.checkboxAndRadioHorizontal
-                                }
-                            >
-                                <FormControlLabel
-                                    control={
-                                        <Checkbox
-                                            tabIndex={-1}
-                                            onClick={() => handleToggle(22)}
-                                            checked={checked.indexOf(22) !== -1 ? true : false}
-                                            checkedIcon={<Check className={classes.checkedIcon}/>}
-                                            icon={<Check className={classes.uncheckedIcon}/>}
-                                            classes={{
-                                                checked: classes.checked,
-                                                root: classes.checkRoot
-                                            }}
-                                        />
-                                    }
-                                    classes={{label: classes.label, root: classes.labelRoot}}
-                                    label="Checked"
-                                />
-                            </div>
-                            <div
-                                className={
-                                    classes.checkboxAndRadio +
-                                    " " +
-                                    classes.checkboxAndRadioHorizontal
-                                }
-                            >
-                                <FormControlLabel
-                                    disabled
-                                    control={
-                                        <Checkbox
-                                            tabIndex={-1}
-                                            checkedIcon={<Check className={classes.checkedIcon}/>}
-                                            icon={<Check className={classes.uncheckedIcon}/>}
-                                            classes={{
-                                                checked: classes.checked,
-                                                root: classes.checkRoot
-                                            }}
-                                        />
-                                    }
-                                    classes={{
-                                        label: classes.label,
-                                        disabled: classes.disabledCheckboxAndRadio,
-                                        root: classes.labelRoot
-                                    }}
-                                    label="Disabled Unchecked"
-                                />
-                            </div>
-                            <div
-                                className={
-                                    classes.checkboxAndRadio +
-                                    " " +
-                                    classes.checkboxAndRadioHorizontal
-                                }
-                            >
-                                <FormControlLabel
-                                    disabled
-                                    control={
-                                        <Checkbox
-                                            tabIndex={-1}
-                                            checked={checked.indexOf(24) !== -1 ? true : false}
-                                            checkedIcon={<Check className={classes.checkedIcon}/>}
-                                            icon={<Check className={classes.uncheckedIcon}/>}
-                                            classes={{
-                                                checked: classes.checked,
-                                                root: classes.checkRoot
-                                            }}
-                                        />
-                                    }
-                                    classes={{
-                                        label: classes.label,
-                                        disabled: classes.disabledCheckboxAndRadio,
-                                        root: classes.labelRoot
-                                    }}
-                                    label="Disabled Checked"
-                                />
-                            </div>
-                        </GridItem>
-                        <GridItem xs={12} sm={6} md={4} lg={3}>
-                            <div className={classes.title}>
-                                <h3>Toggle Buttons</h3>
-                            </div>
-                            <div>
-                                <FormControlLabel
-                                    control={
-                                        <Switch
-                                            checked={checkedA}
-                                            onChange={event => setCheckedA(event.target.checked)}
-                                            value="checkedA"
-                                            classes={{
-                                                switchBase: classes.switchBase,
-                                                checked: classes.switchChecked,
-                                                thumb: classes.switchIcon,
-                                                track: classes.switchBar
-                                            }}
-                                        />
-                                    }
-                                    classes={{
-                                        label: classes.label
-                                    }}
-                                    label="Toggle is on"
-                                />
-                            </div>
-                            <div>
-                                <FormControlLabel
-                                    control={
-                                        <Switch
-                                            checked={checkedB}
-                                            onChange={event => setCheckedB(event.target.checked)}
-                                            value="checkedB"
-                                            classes={{
-                                                switchBase: classes.switchBase,
-                                                checked: classes.switchChecked,
-                                                thumb: classes.switchIcon,
-                                                track: classes.switchBar
-                                            }}
-                                        />
-                                    }
-                                    classes={{
-                                        label: classes.label
-                                    }}
-                                    label="Toggle is off"
-                                />
-                            </div>
-                        </GridItem>
-                    </GridContainer>
-                </div>
-                <div className={classes.space70}/>
-                <div id="progress">
-                    <GridContainer>
-                        <GridItem xs={12} sm={12} md={6}>
-                            <div className={classes.title}>
-                                <h3>Progress Bars</h3>
-                            </div>
-                            <CustomLinearProgress
-                                variant="determinate"
-                                color="primary"
-                                value={30}
-                            />
-                            <CustomLinearProgress
-                                variant="determinate"
-                                color="info"
-                                value={60}
-                            />
-                            <CustomLinearProgress
-                                variant="determinate"
-                                color="success"
-                                value={100}
-                                style={{width: "35%", display: "inline-block"}}
-                            />
-                            <CustomLinearProgress
-                                variant="determinate"
-                                color="warning"
-                                value={100}
-                                style={{width: "20%", display: "inline-block"}}
-                            />
-                            <CustomLinearProgress
-                                variant="determinate"
-                                color="danger"
-                                value={25}
-                                style={{width: "45%", display: "inline-block"}}
-                            />
-                        </GridItem>
-                        <GridItem xs={12} sm={12} md={6}>
-                            <div className={classes.title}>
-                                <h3>Pagination</h3>
-                            </div>
-                            <Paginations
-                                pages={[
-                                    {text: 1},
-                                    {text: "..."},
-                                    {text: 5},
-                                    {text: 6},
-                                    {active: true, text: 7},
-                                    {text: 8},
-                                    {text: 9},
-                                    {text: "..."},
-                                    {text: 12}
-                                ]}
-                            />
-                            <Paginations
-                                pages={[
-                                    {text: "PREV"},
-                                    {text: 1},
-                                    {text: 2},
-                                    {active: true, text: 3},
-                                    {text: 4},
-                                    {text: 5},
-                                    {text: "NEXT"}
-                                ]}
-                                color="info"
-                            />
-                        </GridItem>
-                    </GridContainer>
-                </div>
-                <div id="sliders">
-                    <GridContainer>
-                        <GridItem xs={12} sm={12} md={6}>
-                            <div className={classes.title}>
-                                <h3>Sliders</h3>
-                            </div>
-                            <div id="sliderRegular" className="slider-primary"/>
-                            <br/>
-                            <div id="sliderDouble" className="slider-info"/>
-                        </GridItem>
-                        <GridItem xs={12} sm={12} md={6}>
-                            <div className={classes.title}>
-                                <h3>Badges</h3>
-                            </div>
-                            <Badge>default</Badge>
-                            <Badge color="primary">primary</Badge>
-                            <Badge color="info">info</Badge>
-                            <Badge color="success">success</Badge>
-                            <Badge color="warning">warning</Badge>
-                            <Badge color="danger">danger</Badge>
-                            <Badge color="rose">rose</Badge>
-                        </GridItem>
-                    </GridContainer>
-                </div>
-            </div>
+<div className={classes.section}>
+      <div className={classes.container}>
+        <div id="nav-tabs">
+          <GridContainer>
+            <GridItem xs={12} sm={12} md={6}>
+            <h2 className={classes.title}>Qui sommes-nous ?</h2>
+                <br/>
+              <CustomTabs
+                headerColor="info"
+                tabs={[
+                  {
+                    tabName: "Quad Squad",
+                    tabIcon: People,
+                    tabContent: (
+                      <p className={classes.textCenter}>
+                            <b>Quad Squad</b> est une équipe composée de 4 personnes,
+                          destinée à développer des applications en utilisant des technologies
+                          récentes.
+                      </p>
+                    )
+                  },
+                  {
+                    tabName: "Mission",
+                    tabIcon: Chat,
+                    tabContent: (
+                      <p className={classes.textCenter}>
+                        I think that’s a responsibility that I have, to push
+                        possibilities, to show people, this is the level that
+                        things could be at. I will be the leader of a company
+                        that ends up being worth billions of dollars, because I
+                        got the answers. I understand culture. I am the nucleus.
+                        I think that’s a responsibility that I have, to push
+                        possibilities, to show people, this is the level that
+                        things could be at.
+                      </p>
+                    )
+                  },
+                  {
+                    tabName: "Objectifs",
+                    tabIcon: Build,
+                    tabContent: (
+                      <p className={classes.textCenter}>
+                        think that’s a responsibility that I have, to push
+                        possibilities, to show people, this is the level that
+                        things could be at. So when you get something that has
+                        the name Kanye West on it, it’s supposed to be pushing
+                        the furthest possibilities. I will be the leader of a
+                        company that ends up being worth billions of dollars,
+                        because I got the answers. I understand culture. I am
+                        the nucleus.
+                      </p>
+                    )
+                  }
+                ]}
+              />
+            </GridItem>
+            <GridItem xs={6} sm={6} md={6} justify="center">
+                <img src={image}/>
+            </GridItem>
+          </GridContainer>
         </div>
+      </div>
+    </div>
     );
 }

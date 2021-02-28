@@ -12,9 +12,21 @@ import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
-import { Apps, HomeRounded,
-         ImageRounded , InfoRounded ,
-        EventRounded, RoomService, LockOpenOutlined} from "@material-ui/icons";
+import {
+    Apps,
+    HomeRounded,
+    ImageRounded,
+    InfoRounded,
+    EventRounded,
+    RoomService,
+    LockOpenOutlined,
+    ShoppingCartSharp,
+    Category,
+    ShoppingCart,
+    Send,
+    Group,
+    SubscriptionsRounded, LockOutlined, PeopleAltOutlined
+} from "@material-ui/icons";
 
 // core components
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
@@ -25,6 +37,8 @@ import CardFooter from "../Card/CardFooter";
 import GridItem from "../Grid/GridItem";
 import Favorite from "@material-ui/icons/Favorite";
 
+import Product from "@material-ui/icons";
+import TeamSection from "../../views/LandingPage/Sections/TeamSection";
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
@@ -42,48 +56,40 @@ export default function HeaderLinks(props) {
         </a>
       </ListItem>
 
+              <ListItem className={classes.listItem}>
+          <a href="" className={classes.navLink}>
+           <PeopleAltOutlined className={classes.icons} /> Equipe
+        </a>
+      </ListItem>
       <ListItem className={classes.listItem}>
           <a href="" className={classes.navLink}>
-           <ImageRounded className={classes.icons} /> Galeries
+           <ShoppingCart className={classes.icons} /> Produits
         </a>
       </ListItem>
 
         <ListItem className={classes.listItem}>
           <a href="" className={classes.navLink}>
-           <EventRounded className={classes.icons} /> Evénements
+           <Group className={classes.icons} /> Services
         </a>
       </ListItem>
 
+
+
         <ListItem className={classes.listItem}>
+
+            <a href="">
+              <Button color="primary" round>
+                  <LockOutlined className={classes.icons} />Login</Button>
+            </a>
+      </ListItem>
+
+                <ListItem className={classes.listItem}>
           <a href="" className={classes.navLink}>
-           <RoomService className={classes.icons} /> Services
+                <LockOpenOutlined className={classes.icons} /> S'inscrire
         </a>
-      </ListItem>
-        
-        <ListItem className={classes.listItem}>
+       </ListItem>
 
-              <Button color="rose" round>
-                  <LockOpenOutlined className={classes.icons} />Login</Button>
 
-      </ListItem>
-
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-facebook"
-          title="Contactez-nous sur facebook"
-          placement={window.innerWidth > 970 ? "top" : "left"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            color="transparent"
-            href="https://www.facebook.com/CreativeTim?ref=creativetim"
-            target="_blank"
-            className={classes.navLink}
-          >
-            <i className={classes.socialIcons + " fab fa-facebook"} />
-          </Button>
-        </Tooltip>
-      </ListItem>
     </List>
   );
 }

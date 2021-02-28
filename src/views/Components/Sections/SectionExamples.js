@@ -23,7 +23,7 @@ export default function SectionExamples() {
     <div className={classes.section}>
       <div className={classes.container}>
         <GridContainer justify="center">
-          <GridItem xs={12} sm={12} md={6}>
+          <GridItem xs={3} sm={3} md={3}>
             <Link to="landing-page" className={classes.link}>
               <img
                 src={landing}
@@ -37,11 +37,47 @@ export default function SectionExamples() {
                 }
               />
               <Button color="primary" size="lg" simple>
-                View landing page
+                 Syrine Jlassi
               </Button>
             </Link>
           </GridItem>
-          <GridItem xs={12} sm={12} md={6}>
+          <GridItem xs={3} sm={3} md={3}>
+            <Link to="profile-page" className={classes.link}>
+              <img
+                src={profile}
+                alt="..."
+                className={
+                  classes.imgRaised +
+                  " " +
+                  classes.imgRounded +
+                  " " +
+                  classes.imgFluid
+                }
+              />
+              <Button color="primary" size="lg" simple>
+                View profile page
+              </Button>
+            </Link>
+          </GridItem>
+                     <GridItem xs={3} sm={3} md={3}>
+            <Link to="profile-page" className={classes.link}>
+              <img
+                src={profile}
+                alt="..."
+                className={
+                  classes.imgRaised +
+                  " " +
+                  classes.imgRounded +
+                  " " +
+                  classes.imgFluid
+                }
+              />
+              <Button color="primary" size="lg" simple>
+                View profile page
+              </Button>
+            </Link>
+          </GridItem>
+                     <GridItem xs={3} sm={3} md={3}>
             <Link to="profile-page" className={classes.link}>
               <img
                 src={profile}

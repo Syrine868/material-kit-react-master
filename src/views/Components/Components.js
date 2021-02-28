@@ -28,8 +28,11 @@ import SectionLogin from "./Sections/SectionLogin.js";
 import SectionExamples from "./Sections/SectionExamples.js";
 import SectionDownload from "./Sections/SectionDownload.js";
 
+
 import styles from "assets/jss/material-kit-react/views/components.js";
 import CustomTabs from "../../components/CustomTabs/CustomTabs";
+import ProfilePage from "../ProfilePage/ProfilePage";
+import TeamSection from "../LandingPage/Sections/TeamSection";
 
 const useStyles = makeStyles(styles);
 
@@ -39,25 +42,27 @@ export default function Components(props) {
   return (
     <div>
       <Header
-        brand="Material Kit React"
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"
+        brand="G e n I F ' I"
         changeColorOnScroll={{
           height: 400,
           color:"default",
+            backgroundColor:"bgCyan",
         }}
         {...rest}
+
       />
-      <Parallax image={require("assets/img/bgNew.jpg")}>
+      <Parallax image={require("assets/img/background.jpg")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem>
               <div className={classes.brand}>
-                <h1 className={classes.title}> Healing Energy Reiki Usui </h1>
+                <h1 className={classes.title}> G E N I F ' I </h1>
                 <h3 className={classes.subtitle}>
-                  Ici c'est votre adresse bien-être.
-                  Namasté. ♡
+                  Renforcez votre marque avec des sites Web génériques polyvalents.
+                  Gagnez du temps et construisez-le en quelques minutes.♡
                 </h3>
               </div>
             </GridItem>
@@ -67,24 +72,8 @@ export default function Components(props) {
 
       <div className={classNames(classes.main, classes.mainRaised)}>
         <SectionBasics />
-        <SectionNavbars />
-        <SectionTabs />
-        <SectionPills />
-        <SectionNotifications />
-        <SectionTypography />
-        <SectionJavascript />
-        <SectionCarousel />
-        <SectionCompletedExamples />
-        <SectionLogin />
-        <GridItem md={12} className={classes.textCenter}>
-          <Link to={"/login-page"} className={classes.link}>
-            <Button color="primary" size="lg" simple>
-              View Login Page
-            </Button>
-          </Link>
-        </GridItem>
-        <SectionExamples />
-        <SectionDownload />
+        <hr/>
+        <TeamSection/>
       </div>
       <Footer />
     </div>
