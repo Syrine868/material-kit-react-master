@@ -6,8 +6,8 @@ const signupPageStyle = {
     zIndex: "2",
     position: "relative",
     paddingTop: "20vh",
-    color: "#FFFFFF",
-    paddingBottom: "200px"
+    color: "#FFF",
+    paddingBottom: "200px",
   },
   cardHidden: {
     opacity: "0",
@@ -36,7 +36,7 @@ const signupPageStyle = {
       content: '""'
     },
     "& footer li a,& footer li a:hover,& footer li a:active": {
-      color: "#FFFFFF"
+      color: "#FFF"
     },
     "& footer": {
       position: "absolute",
@@ -45,8 +45,15 @@ const signupPageStyle = {
     }
   },
   form: {
-    margin: "0"
+    margin: "0",
+
   },
+
+  form_group:{
+    display: "inline",
+    justifyContent:"space-between",
+}
+    ,
   cardHeader: {
     width: "auto",
     textAlign: "center",

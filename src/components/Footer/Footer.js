@@ -37,7 +37,7 @@ export default function Footer(props) {
                 className={classes.block}
                 target="_blank"
               >
-                Creative Tim
+                Accueil
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
@@ -46,40 +46,40 @@ export default function Footer(props) {
                 className={classes.block}
                 target="_blank"
               >
-                About us
+                A propos de nous
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="http://blog.creative-tim.com/?ref=mkr-footer"
+                href="#"
                 className={classes.block}
                 target="_blank"
               >
-                Blog
+                Produits
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/license?ref=mkr-footer"
+                href="#"
                 className={classes.block}
                 target="_blank"
               >
-                Licenses
+                Services
               </a>
             </ListItem>
           </List>
         </div>
         <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} , made with{" "}
+          &copy; {1900 + new Date().getYear()} , créer avec{" "}
           <Favorite className={classes.icon} /> by{" "}
           <a
             href="https://www.creative-tim.com?ref=mkr-footer"
             className={aClasses}
             target="_blank"
           >
-            Creative Tim
+            Quad Squad.
           </a>{" "}
-          for a better web.
+          Together we lead better.
         </div>
       </div>
     </footer>

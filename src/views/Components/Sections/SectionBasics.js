@@ -1,45 +1,27 @@
 import React from "react";
 // plugin that creates slider
-import Slider from "nouislider";
 // @material-ui/core components
 import {makeStyles} from "@material-ui/core/styles";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
-import Radio from "@material-ui/core/Radio";
-import Switch from "@material-ui/core/Switch";
 // @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
 import People from "@material-ui/icons/People";
-import Check from "@material-ui/icons/Check";
-import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
+
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
-import CustomInput from "components/CustomInput/CustomInput.js";
-import CustomLinearProgress from "components/CustomLinearProgress/CustomLinearProgress.js";
-import Paginations from "components/Pagination/Pagination.js";
-import Badge from "components/Badge/Badge.js";
+
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/basicsStyle.js";
-import {Card} from "@material-ui/core";
-import CardBody from "../../../components/Card/CardBody";
-import CardFooter from "../../../components/Card/CardFooter";
+
 import CustomTabs from "../../../components/CustomTabs/CustomTabs";
-import Face from "@material-ui/icons/Face";
 import Chat from "@material-ui/icons/Chat";
 import Build from "@material-ui/icons/Build";
 
 import image from "assets/img/LOGO QUAD.png";
+import {StarBorderOutlined} from "@material-ui/icons";
 const useStyles = makeStyles(styles);
 
 export default function SectionBasics() {
     const classes = useStyles();
-    const [checked, setChecked] = React.useState([24, 22]);
-    const [selectedEnabled, setSelectedEnabled] = React.useState("b");
-    const [checkedA, setCheckedA] = React.useState(true);
-    const [checkedB, setCheckedB] = React.useState(false);
 
 
     return (
@@ -47,11 +29,11 @@ export default function SectionBasics() {
       <div className={classes.container}>
         <div id="nav-tabs">
           <GridContainer>
-            <GridItem xs={12} sm={12} md={6}>
+            <GridItem xs={7} sm={7} md={7}>
             <h2 className={classes.title}>Qui sommes-nous ?</h2>
                 <br/>
               <CustomTabs
-                headerColor="info"
+                headerColor="primary"
                 tabs={[
                   {
                     tabName: "Quad Squad",
@@ -69,14 +51,10 @@ export default function SectionBasics() {
                     tabIcon: Chat,
                     tabContent: (
                       <p className={classes.textCenter}>
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. I will be the leader of a company
-                        that ends up being worth billions of dollars, because I
-                        got the answers. I understand culture. I am the nucleus.
-                        I think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at.
+                          Notre objectif vise à mettre des templates pré-existantes pour nos clients
+                          afin de l'exploiter dans leur domaine aprés avoir introduit leur contenu
+                          sans écrire du code mais en choisissant et déplaçant les éléments qui leur
+                          convient mieux.
                       </p>
                     )
                   },
@@ -85,21 +63,24 @@ export default function SectionBasics() {
                     tabIcon: Build,
                     tabContent: (
                       <p className={classes.textCenter}>
-                        think that’s a responsibility that I have, to push
-                        possibilities, to show people, this is the level that
-                        things could be at. So when you get something that has
-                        the name Kanye West on it, it’s supposed to be pushing
-                        the furthest possibilities. I will be the leader of a
-                        company that ends up being worth billions of dollars,
-                        because I got the answers. I understand culture. I am
-                        the nucleus.
+
+                          <StarBorderOutlined className={classes.icon}/>Design ergonomique.
+                          <br/>
+                        <StarBorderOutlined className={classes.icon}/>
+                          Elements fléxibles et configurables.
+                          <br/>
+                        <StarBorderOutlined className={classes.icon}/>
+                          Donner la possibilité au propriétaire du site pour manipuler ces éléments.
+
+
                       </p>
                     )
                   }
                 ]}
               />
             </GridItem>
-            <GridItem xs={6} sm={6} md={6} justify="center">
+            <GridItem xs={5} sm={5} md={5} justify="center">
+                <br/>
                 <img src={image}/>
             </GridItem>
           </GridContainer>

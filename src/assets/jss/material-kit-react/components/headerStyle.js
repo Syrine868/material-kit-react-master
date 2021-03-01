@@ -68,6 +68,12 @@ const headerStyle = {
   appResponsive: {
     margin: "20px 10px"
   },
+    logo: {
+      background:"transparent",
+      width: "110px",
+      height:"43px"
+    }
+    ,
   primary: {
     backgroundColor: primaryColor,
     color: "#FFFFFF",
@@ -116,6 +122,13 @@ const headerStyle = {
     boxShadow:
       "0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 12px -5px rgba(33, 33, 33, 0.46)"
   },
+
+  darkblue:{
+    color:"#FFFFFF",
+    backgroundColor:"#680579",
+    opacity:10
+  }
+    ,
   white: {
     border: "0",
     padding: "0.625rem 0",

@@ -1,7 +1,5 @@
 /*eslint-disable*/
-import React from "react";
-import DeleteIcon from "@material-ui/icons/Delete";
-import IconButton from "@material-ui/core/IconButton";
+import React, {useState, useRef, useEffect} from "react";
 // react components for routing our app without refresh
 import { Link } from "react-router-dom";
 
@@ -33,63 +31,49 @@ import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
-import CardFooter from "../Card/CardFooter";
-import GridItem from "../Grid/GridItem";
-import Favorite from "@material-ui/icons/Favorite";
 
-import Product from "@material-ui/icons";
-import TeamSection from "../../views/LandingPage/Sections/TeamSection";
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
-  const classes = useStyles();
-  return (
-    <List className={classes.list}>
-      <ListItem className={classes.listItem}>
-        <a href="" className={classes.navLink}>
-           <HomeRounded className={classes.icons} /> Accueil
-        </a>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-          <a href="" className={classes.navLink}>
-           <InfoRounded className={classes.icons} /> A propos
-        </a>
-      </ListItem>
+    const classes = useStyles();
 
-              <ListItem className={classes.listItem}>
-          <a href="" className={classes.navLink}>
-           <PeopleAltOutlined className={classes.icons} /> Equipe
-        </a>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-          <a href="" className={classes.navLink}>
-           <ShoppingCart className={classes.icons} /> Produits
-        </a>
-      </ListItem>
-
-        <ListItem className={classes.listItem}>
-          <a href="" className={classes.navLink}>
-           <Group className={classes.icons} /> Services
-        </a>
-      </ListItem>
-
-
-
-        <ListItem className={classes.listItem}>
-
-            <a href="">
-              <Button color="primary" round>
-                  <LockOutlined className={classes.icons} />Login</Button>
-            </a>
-      </ListItem>
+        return (
+            <List className={classes.list}>
+                <ListItem className={classes.listItem}>
+                    <a href="#" className={classes.navLink}>
+                        <HomeRounded className={classes.icons}/> Accueil
+                    </a>
+                </ListItem>
+                <ListItem className={classes.listItem}>
+                    <a onClick={() => scrollTo("about")} className={classes.navLink}>
+                        <InfoRounded className={classes.icons}/> A propos
+                    </a>
+                </ListItem>
 
                 <ListItem className={classes.listItem}>
-          <a href="" className={classes.navLink}>
-                <LockOpenOutlined className={classes.icons} /> S'inscrire
-        </a>
-       </ListItem>
+                    <a onClick={() => scrollTo("equipe")} className={classes.navLink}>
+                        <PeopleAltOutlined className={classes.icons}/> Equipe
+                    </a>
+                </ListItem>
+                <ListItem className={classes.listItem}>
+                    <a onClick={() => scrollTo("produits")} className={classes.navLink}>
+                        <ShoppingCart className={classes.icons}/> Produits
+                    </a>
+                </ListItem>
 
+                <ListItem className={classes.listItem}>
+                    <a onClick={() => scrollTo("services")} className={classes.navLink}>
+                        <Group className={classes.icons}/> Services
+                    </a>
+                </ListItem>
+                <ListItem className={classes.listItem}>
 
-    </List>
-  );
-}
+                    <a href="/login-page">
+                        <Button color="primary" round>
+                            <LockOutlined className={classes.icons}/>Login</Button>
+                    </a>
+                </ListItem>
+            </List>
+        );
+    }
+
