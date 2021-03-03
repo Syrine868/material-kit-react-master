@@ -78,7 +78,7 @@ export default function SectionBasics() {
             </GridItem>
             <GridItem xs={5} sm={5} md={5} justify="center">
                 <br/>
-                <img src={image} alt="About Quad Squad"/>
+                <img src={image} alt="About Quad Squad "/>
             </GridItem>
           </GridContainer>
         </div>
