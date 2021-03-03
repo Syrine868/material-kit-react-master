@@ -30,7 +30,7 @@ export default function SectionBasics() {
         <div id="nav-tabs">
           <GridContainer>
             <GridItem xs={7} sm={7} md={7}>
-            <h2 className={classes.title}>Qui sommes-nous ?</h2>
+            <h2 className={classes.title}>About us</h2>
                 <br/>
               <CustomTabs
                 headerColor="primary"
@@ -40,9 +40,8 @@ export default function SectionBasics() {
                     tabIcon: People,
                     tabContent: (
                       <p className={classes.textCenter}>
-                            <b>Quad Squad</b> est une équipe composée de 4 personnes,
-                          destinée à développer des applications en utilisant des technologies
-                          récentes.
+                            <b>Quad Squad</b> is a team of four people,
+                          intended to develop applications using recent technologies.
                       </p>
                     )
                   },
@@ -51,28 +50,26 @@ export default function SectionBasics() {
                     tabIcon: Chat,
                     tabContent: (
                       <p className={classes.textCenter}>
-                          Notre objectif vise à mettre des templates pré-existantes pour nos clients
-                          afin de l'exploiter dans leur domaine aprés avoir introduit leur contenu
-                          sans écrire du code mais en choisissant et déplaçant les éléments qui leur
-                          convient mieux.
+                          Our goal is to put pre-existing templates for our customers
+                          in order to exploit it in their domain after having introduced their content
+                          without having written any code but by choosing and moving the elements that
+                          fits better.
                       </p>
                     )
                   },
                   {
-                    tabName: "Objectifs",
+                    tabName: "Goals",
                     tabIcon: Build,
                     tabContent: (
                       <p className={classes.textCenter}>
 
-                          <StarBorderOutlined className={classes.icon}/>Design ergonomique.
+                          <StarBorderOutlined className={classes.icon}/>Ergonomic Design.
                           <br/>
                         <StarBorderOutlined className={classes.icon}/>
-                          Elements fléxibles et configurables.
+                          Flexible and configurable elements.
                           <br/>
                         <StarBorderOutlined className={classes.icon}/>
-                          Donner la possibilité au propriétaire du site pour manipuler ces éléments.
-
-
+                          Give the possibility to the owner of the site to manipulate these elements.
                       </p>
                     )
                   }

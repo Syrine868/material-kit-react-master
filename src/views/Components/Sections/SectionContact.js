@@ -18,7 +18,7 @@ import Button from "components/CustomButtons/Button.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import styles from "assets/jss/material-kit-react/views/componentsSections/loginStyle.js";
 import {MessageRounded, SendRounded} from "@material-ui/icons";
-
+import im1 from "assets/img/contact2x.png";
 const useStyles = makeStyles(styles);
 
 export default function SectionContact() {
@@ -29,18 +29,18 @@ export default function SectionContact() {
     <div className={classes.section}>
 
       <div className={classes.container}>
-  <h2 className={classes.title}>Espace Contact</h2>
+  <h2 className={classes.title}>Contact us</h2>
         <br/>
         <GridContainer justify="center">
-          <GridItem xs={4} sm={4} md={4}>
+          <GridItem xs={6} sm={6} md={6}>
             <Card>
               <form className={classes.form}>
                 <CardHeader color="primary" className={classes.cardHeader}>
-                  <h4>Pour plus d'informations, merci de remplir le formulaire.</h4>
+                  <h4>For more information, please fill out the form.</h4>
                 </CardHeader>
                 <CardBody>
                   <CustomInput
-                    labelText="Prénom..."
+                    labelText="First name..."
                     id="first"
                     formControlProps={{
                       fullWidth: true
@@ -55,7 +55,7 @@ export default function SectionContact() {
                     }}
                   />
                    <CustomInput
-                    labelText="Nom..."
+                    labelText="Last name..."
                     id="last"
                     formControlProps={{
                       fullWidth: true
@@ -70,7 +70,7 @@ export default function SectionContact() {
                     }}
                   />
                   <CustomInput
-                    labelText="Adresse email..."
+                    labelText="Email Address..."
                     id="email"
                     formControlProps={{
                       fullWidth: true
@@ -86,7 +86,7 @@ export default function SectionContact() {
                   />
 
                   <CustomInput
-                      labelText="Laissez votre message..."
+                      labelText="Write your message ..."
                     id="msg"
                     formControlProps={{
                       fullWidth: true
@@ -108,32 +108,15 @@ export default function SectionContact() {
                 </CardBody>
                 <CardFooter className={classes.cardFooter}>
                   <Button round color="primary" size="md">
-                    <SendRounded className={classes.icons} /> Envoyer
+                    <SendRounded className={classes.icons} /> Send
                   </Button>
                 </CardFooter>
               </form>
             </Card>
           </GridItem>
 
-        <GridItem xs={8} sm={8} md={8}>
-            <ReactGoogleMapLoader
-    params={{
-        key: 'AIzaSyA0yliWaf8ymmQnzy2MqrI9IkbbFzYW2b4', // Define your api key here
-        libraries: "places,geometry", // To request multiple libraries, separate them with a comma
-    }}
-    render={(googleMaps, error) =>
-        googleMaps ? (
-            <div>
-                {/*Show a custom error if SDK Authentication Error. See N/B 2 below.*/}
-                {error ? error : "Google Maps is loaded !"}
-            </div>
-        )   :   (
-            <div>
-                {/*Check for network error so loading state ends if user lost connection.*/}
-                {error === "Network Error" ? <p>{error}</p> : <p>isLoading...</p>}
-            </div>
-        )
-    }/>
+        <GridItem xs={5} sm={5} md={5}>
+            <img src={im1}/>
         </GridItem>
 
         </GridContainer>

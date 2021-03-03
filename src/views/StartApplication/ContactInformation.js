@@ -17,19 +17,28 @@ import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardFooter from "components/Card/CardFooter.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
-import { Form, FormGroup } from "react-bootstrap";
 
 
 
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
 import image from "assets/img/backgroundLogin.jpg";
-import {LockOpen, LockOpenOutlined, OpenInBrowserOutlined} from "@material-ui/icons";
-import ListItem from "@material-ui/core/ListItem";
+import {
+    ArrowRightAltOutlined,
+    CheckBox,
+    DateRange,
+    ListAltOutlined,
+    LockOpen,
+    LockOpenOutlined,
+    LockOutlined,
+    Person, Phone,
+    SecurityOutlined
+} from "@material-ui/icons";
+import {Checkbox} from "@material-ui/core";
 
 const useStyles = makeStyles(styles);
 
-export default function LoginPage(props) {
+export default function SignUp(props) {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
   setTimeout(function() {
     setCardAnimation("");
@@ -55,46 +64,20 @@ export default function LoginPage(props) {
       >
         <div className={classes.container}>
           <GridContainer justify="center">
-            <GridItem xs={4} sm={4} md={4}>
+            <GridItem xs={6} sm={6} md={6}>
+
               <Card className={classes[cardAnimaton]}>
                   <CardHeader color="primary" className={classes.cardHeader}>
-                    <h4>Login</h4>
-                    <div className={classes.socialLine}>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <i className={"fab fa-twitter"} />
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <i className={"fab fa-facebook"} />
-                      </Button>
-                      <Button
-                        justIcon
-                        href="#pablo"
-                        target="_blank"
-                        color="transparent"
-                        onClick={e => e.preventDefault()}
-                      >
-                        <i className={"fab fa-google-plus-g"} />
-                      </Button>
-                    </div>
+                    <p>Please, complete this form with your contact informations<br/><b></b></p>
                   </CardHeader>
                   <CardBody>
-                    <Form>
-                    <FormGroup>
 
-                    <CustomInput
-                      labelText="Email..."
+                    <div className={classes.title}>
+                            <h3>Contact Informations</h3>
+                        <hr/>
+                    </div>
+                      <CustomInput
+                      labelText="Email address..."
                       id="email"
                       formControlProps={{
                         fullWidth: true
@@ -108,36 +91,36 @@ export default function LoginPage(props) {
                         )
                       }}
                     />
-
                     <CustomInput
-                      labelText="Password"
-                      id="pass"
+                      labelText="Phone number..."
+                      id="phone"
                       formControlProps={{
                         fullWidth: true
                       }}
                       inputProps={{
-                        type: "password",
+                        type: "phone",
                         endAdornment: (
                           <InputAdornment position="end">
-                            <Icon className={classes.inputIconsColor}>
-                              lock_outline
-                            </Icon>
+                            <Phone className={classes.inputIconsColor} />
                           </InputAdornment>
-                        ),
-                        autoComplete: "off"
+                        )
                       }}
                     />
 
-                    </FormGroup>
-                      </Form>
                   </CardBody>
+
                   <CardFooter className={classes.cardFooter}>
+                      <a className={classes.links} href="/account-info-page">
                     <Button round color="primary" size="lg">
-                       <LockOpen className={classes.socialIcons}/> Se connecter
+                       <ArrowRightAltOutlined className={classes.socialIcons}/> Go to next
                     </Button>
+                      </a>
                   </CardFooter>
               </Card>
+
             </GridItem>
+
+
           </GridContainer>
         </div>
         <Footer whiteFont />

@@ -31,7 +31,7 @@ export default function TeamSection() {
   );
   return (
     <div className={classes.section}>
-      <h2 className={classes.title}>Voici notre équipe</h2>
+      <h2 className={classes.title}>Our team</h2>
       <div>
         <GridContainer>
           <GridItem xs={3} sm={3} md={3}>
@@ -42,7 +42,7 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                  Syrine Jlassi
                 <br />
-                <small className={classes.smallTitle}>Chef d'équipe</small>
+                <small className={classes.smallTitle}>Team Leader</small>
               </h4>
               <CardFooter className={classes.justifyCenter}>
                 <Button
@@ -77,7 +77,7 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                Mohamed Amine Laribi
                 <br />
-                <small className={classes.smallTitle}>Membre</small>
+                <small className={classes.smallTitle}>Team Member</small>
               </h4>
               <CardFooter className={classes.justifyCenter}>
                 <Button
@@ -112,7 +112,7 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                 Sofien Ressaissi
                 <br />
-                <small className={classes.smallTitle}>Membre</small>
+                <small className={classes.smallTitle}>Team Member</small>
               </h4>
               <CardFooter className={classes.justifyCenter}>
                 <Button
@@ -148,7 +148,7 @@ export default function TeamSection() {
               <h4 className={classes.cardTitle}>
                   Ahmed Ben Hassine
                 <br />
-                <small className={classes.smallTitle}>Membre</small>
+                <small className={classes.smallTitle}>Team Member</small>
               </h4>
               <CardFooter className={classes.justifyCenter}>
                 <Button

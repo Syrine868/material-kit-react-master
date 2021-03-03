@@ -28,11 +28,11 @@ export default function SectionNavbars() {
         <div className={classes.section}>
 
             <div className={classes.container}>
-                <h2 className={classes.title}>Lancer vos produits</h2>
+                <h2 className={classes.title}>Launch your products</h2>
                 <GridContainer>
                     <GridItem xs={7} sm={7} md={7}>
                         <div className={classes.title}>
-                            <h3>Ce qu'on offre</h3>
+                            <h3>What we offer</h3>
                         </div>
                         <CustomTabs
                             color="info"
@@ -40,18 +40,18 @@ export default function SectionNavbars() {
                                 {
                                     tabContent: (
                                         <p className={classes.textCenter}>
-                                            Grâce à notre application, vous pouvez créer et configurer
-                                            votre propre site e-commerce dans le domaine qui vous intérésse,
-                                            avec un design ergonomique et des éléments riches et génériques.
+                                            Through our app, you can create and configure
+                                            your own application in the domain that interests you
+                                            with an ergonomic design and rich, generic elements.
                                             <br/>
-                                            <b> Pour lancer votre activité, il suffit de cliquer sur le bouton çi
-                                                dessous.</b>
+                                            <b>To start your activity, just click on the button here
+                                                below.</b>
                                             <br/>
                                             <ListItem className={classes.listItem}>
 
                                                 <a href="/">
                                                     <Button color="rose" round sm>
-                                                        <ArrowRightAltOutlined className={classes.icons}/>Démarrer</Button>
+                                                        <ArrowRightAltOutlined className={classes.icons}/>Start</Button>
                                                 </a>
                                             </ListItem>
                                         </p>

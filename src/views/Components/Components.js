@@ -23,6 +23,8 @@ import styles from "assets/jss/material-kit-react/views/components.js";
 
 import TeamSection from "../LandingPage/Sections/TeamSection";
 import SectionService from "./Sections/SectionService";
+import Button from "../../components/CustomButtons/Button";
+import {OpenInBrowserOutlined} from "@material-ui/icons";
 
 const useStyles = makeStyles(styles);
 
@@ -50,9 +52,18 @@ export default function Components(props) {
               <div className={classes.brand}>
                 <h1 className={classes.title}> G E N I F ' I </h1>
                 <h3 className={classes.subtitle}>
-                  Renforcez votre marque avec des sites Web génériques polyvalents.
-                  Gagnez du temps et construisez-le en quelques minutes.♡
+                    Wellspring your brand with  multipurpose and generic website. <br/>
+                    Save time and build it in minutes. ♡
                 </h3>
+                  <br/>
+                   <div className={classes.container}>
+          <GridContainer justify="center">
+                  <a href="/start-page">
+                        <Button color="rose" size="lg"  round>
+                            <OpenInBrowserOutlined className={classes.icons}/>Launch your website </Button>
+                    </a>
+               </GridContainer>
+        </div>
               </div>
             </GridItem>
           </GridContainer>

@@ -23,11 +23,11 @@ import {
     ShoppingCart,
     Send,
     Group,
-    SubscriptionsRounded, LockOutlined, PeopleAltOutlined
+    SubscriptionsRounded, LockOutlined, PeopleAltOutlined, OpenInBrowserOutlined
 } from "@material-ui/icons";
 
 // core components
-import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
+//import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
@@ -41,38 +41,44 @@ export default function HeaderLinks(props) {
             <List className={classes.list}>
                 <ListItem className={classes.listItem}>
                     <a href="#" className={classes.navLink}>
-                        <HomeRounded className={classes.icons}/> Accueil
+                        <HomeRounded className={classes.icons}/> Home
                     </a>
                 </ListItem>
                 <ListItem className={classes.listItem}>
-                    <a onClick={() => scrollTo("about")} className={classes.navLink}>
-                        <InfoRounded className={classes.icons}/> A propos
-                    </a>
-                </ListItem>
-
-                <ListItem className={classes.listItem}>
-                    <a onClick={() => scrollTo("equipe")} className={classes.navLink}>
-                        <PeopleAltOutlined className={classes.icons}/> Equipe
-                    </a>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                    <a onClick={() => scrollTo("produits")} className={classes.navLink}>
-                        <ShoppingCart className={classes.icons}/> Produits
+                    <a onClick={() => scrollTo("About")} className={classes.navLink}>
+                        <InfoRounded className={classes.icons}/> About us
                     </a>
                 </ListItem>
 
                 <ListItem className={classes.listItem}>
-                    <a onClick={() => scrollTo("services")} className={classes.navLink}>
+                    <a onClick={() => scrollTo("Team")} className={classes.navLink}>
+                        <PeopleAltOutlined className={classes.icons}/> Team
+                    </a>
+                </ListItem>
+                <ListItem className={classes.listItem}>
+                    <a onClick={() => scrollTo("Products")} className={classes.navLink}>
+                        <ShoppingCart className={classes.icons}/> Products
+                    </a>
+                </ListItem>
+
+                <ListItem className={classes.listItem}>
+                    <a onClick={() => scrollTo("Services")} className={classes.navLink}>
                         <Group className={classes.icons}/> Services
+                    </a>
+                </ListItem>
+                   <ListItem className={classes.listItem}>
+                    <a onClick={() => scrollTo("Contacts")} className={classes.navLink}>
+                        <Group className={classes.icons}/> Contacts
                     </a>
                 </ListItem>
                 <ListItem className={classes.listItem}>
 
                     <a href="/login-page">
-                        <Button color="primary" round>
+                        <Button color="info" round>
                             <LockOutlined className={classes.icons}/>Login</Button>
                     </a>
                 </ListItem>
+
             </List>
         );
     }

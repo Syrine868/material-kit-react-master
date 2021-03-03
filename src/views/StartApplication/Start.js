@@ -1,3 +1,7 @@
+
+//Interface 1 : esm application , logo , domaine , description , <button>confirmer</button>
+// confirmer ihez interface 2 : enti jdid lahne , choix template <valider> --> elements
+
 import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -24,6 +28,7 @@ import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
 import image from "assets/img/backgroundLogin.jpg";
 import {
+    ArrowRightAltOutlined,
     CheckBox,
     DateRange,
     ListAltOutlined,
@@ -67,12 +72,13 @@ export default function SignUp(props) {
 
               <Card className={classes[cardAnimaton]}>
                   <CardHeader color="primary" className={classes.cardHeader}>
-                    <p>If you don't have an account, <br/><b>please complete this form ...</b></p>
+                    <p>please complete this form with your personal informations ...
+                        <br/><b></b></p>
                   </CardHeader>
                   <CardBody>
 
                       <div className={classes.title}>
-                            <h3>personal informations</h3>
+                            <h3>Personal informations</h3>
                           <hr/>
                       </div>
                     <CustomInput
@@ -124,113 +130,13 @@ export default function SignUp(props) {
                         autoComplete: "off"
                       }}
                     />
-
-                    <div className={classes.title}>
-                            <h3>Informations de contact</h3>
-                        <hr/>
-                    </div>
-                      <CustomInput
-                      labelText="Email address..."
-                      id="email"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "email",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <Email className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
-                      }}
-                    />
-                    <CustomInput
-                      labelText="phone number..."
-                      id="phone"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "phone",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <Email className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
-                      }}
-                    />
-
-                    <div className={classes.title}>
-                            <h3>Informations de compte</h3>
-                        <hr/>
-                    </div>
-                      <CustomInput
-                      labelText="Username..."
-                      id="username"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "text",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <Person className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
-                      }}
-                    />
-                    <CustomInput
-                      labelText="Password..."
-                      id="password"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "password",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <LockOutlined className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
-                      }}
-                    />
-                    <CustomInput
-                      labelText="Repeat password ..."
-                      id="confirmPwd"
-                      formControlProps={{
-                        fullWidth: true
-                      }}
-                      inputProps={{
-                        type: "password",
-                        endAdornment: (
-                          <InputAdornment position="end">
-                            <LockOutlined className={classes.inputIconsColor} />
-                          </InputAdornment>
-                        )
-                      }}
-                    />
-
-                    <div className={classes.title}>
-                            <h3>Are you an owner ?</h3>
-                        <hr/>
-                    </div>
-                    <Checkbox
-                        required
-                      id="ownerCheck"
-                      formControlProps={{
-                        fullWidth: true,
-                      }}
-                      inputProps={{
-                        type: "checkbox",
-                      }}
-                    /> Propriétaire
-
                   </CardBody>
-
                   <CardFooter className={classes.cardFooter}>
-                    <Button round color="primary" size="lg">
-                       <LockOpenOutlined className={classes.socialIcons}/> Valider
+                      <a className={classes.links} href="/contact-info-page">
+                    <Button  round color="primary" size="lg">
+                       <ArrowRightAltOutlined className={classes.socialIcons}/> Go to next
                     </Button>
+                      </a>
                   </CardFooter>
               </Card>
 
