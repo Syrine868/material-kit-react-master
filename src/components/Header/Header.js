@@ -61,7 +61,7 @@ export default function Header(props) {
     [classes.absolute]: absolute,
     [classes.fixed]: fixed
   });
-  const brandComponent = <img src={LogoImage} className={classes.logo}/> ;
+  const brandComponent = <img alt="logo" src={LogoImage} className={classes.logo}/> ;
   return (
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>

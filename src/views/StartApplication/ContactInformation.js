@@ -2,7 +2,6 @@ import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
-import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
 import Email from "@material-ui/icons/Email";
 // core components
@@ -25,17 +24,9 @@ import styles from "assets/jss/material-kit-react/views/loginPage.js";
 import image from "assets/img/backgroundLogin.jpg";
 import {
     ArrowRightAltOutlined,
-    CheckBox,
-    DateRange,
-    ListAltOutlined,
-    LockOpen,
-    LockOpenOutlined,
-    LockOutlined,
-    Person, Phone,
-    SecurityOutlined
-} from "@material-ui/icons";
-import {Checkbox} from "@material-ui/core";
+    Phone,
 
+} from "@material-ui/icons";
 const useStyles = makeStyles(styles);
 
 export default function SignUp(props) {

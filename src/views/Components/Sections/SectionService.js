@@ -61,7 +61,7 @@ export default function SectionService() {
                         />
                     </GridItem>
                     <GridItem xs={5} sm={5} md={5}>
-                            <img src={ServiceLogo} size="md"/>
+                            <img src={ServiceLogo} size="md" alt="Service GenIF'I "/>
                     </GridItem>
                 </GridContainer>
             </div>

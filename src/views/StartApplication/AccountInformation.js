@@ -2,9 +2,7 @@ import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import InputAdornment from "@material-ui/core/InputAdornment";
-import Icon from "@material-ui/core/Icon";
 // @material-ui/icons
-import Email from "@material-ui/icons/Email";
 // core components
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
@@ -25,16 +23,9 @@ import styles from "assets/jss/material-kit-react/views/loginPage.js";
 import image from "assets/img/backgroundLogin.jpg";
 import {
     ArrowRightAltOutlined,
-    CheckBox,
-    DateRange,
-    ListAltOutlined,
-    LockOpen,
-    LockOpenOutlined,
     LockOutlined,
     Person,
-    SecurityOutlined
 } from "@material-ui/icons";
-import {Checkbox} from "@material-ui/core";
 
 const useStyles = makeStyles(styles);
 

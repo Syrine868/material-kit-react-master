@@ -7,23 +7,14 @@ import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
 import {
-    Apps,
     HomeRounded,
-    ImageRounded,
     InfoRounded,
-    EventRounded,
-    RoomService,
-    LockOpenOutlined,
-    ShoppingCartSharp,
-    Category,
     ShoppingCart,
-    Send,
     Group,
-    SubscriptionsRounded, LockOutlined, PeopleAltOutlined, OpenInBrowserOutlined
+    LockOutlined, PeopleAltOutlined
 } from "@material-ui/icons";
 
 // core components

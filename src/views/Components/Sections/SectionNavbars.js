@@ -64,7 +64,7 @@ export default function SectionNavbars() {
                         />
                     </GridItem>
                     <GridItem xs={5} sm={5} md={5}>
-                            <img src={CommerceLogo}/>
+                            <img src={CommerceLogo} alt="Products GenIF'I "/>
                     </GridItem>
                 </GridContainer>
             </div>

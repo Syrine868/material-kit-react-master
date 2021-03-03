@@ -24,8 +24,7 @@ import { Form, FormGroup } from "react-bootstrap";
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 
 import image from "assets/img/backgroundLogin.jpg";
-import {LockOpen, LockOpenOutlined, OpenInBrowserOutlined} from "@material-ui/icons";
-import ListItem from "@material-ui/core/ListItem";
+import {LockOpen} from "@material-ui/icons";
 
 const useStyles = makeStyles(styles);
 
