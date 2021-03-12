@@ -17,7 +17,7 @@ import SectionBasics from "./Sections/SectionBasics.js";
 import SectionNavbars from "./Sections/SectionNavbars.js";
 import SectionContact from "./Sections/SectionContact";
 
-
+import bg from "assets/img/ecommerceBg.png";
 
 import styles from "assets/jss/material-kit-react/views/components.js";
 
@@ -32,7 +32,7 @@ export default function Components(props) {
   const classes = useStyles();
   const { ...rest } = props;
   return (
-    <div>
+    <div id="home">
       <Header
         rightLinks={<HeaderLinks />}
         fixed
@@ -40,17 +40,17 @@ export default function Components(props) {
         brand="G e n I F ' I"
         changeColorOnScroll={{
           height: 400,
-          color:"darkblue",
+          color:"darkBlue",
         }}
         {...rest}
 
       />
-      <Parallax image={require("assets/img/ecommerceBg.png")}>
+      <Parallax image={bg}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem>
               <div className={classes.brand}>
-                <h1 className={classes.title}> G E N I F ' I </h1>
+                <h1 className={classes.title}> G E N I F &apos; I </h1>
                 <h3 className={classes.subtitle}>
                     Wellspring your brand with  multipurpose and generic website. <br/>
                     Save time and build it in minutes. ♡

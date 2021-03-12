@@ -24,7 +24,7 @@ export default function SectionBasics() {
 
 
     return (
-<div className={classes.section}>
+<div id="about" className={classes.section}>
       <div className={classes.container}>
         <div id="nav-tabs">
           <GridContainer>
@@ -75,7 +75,7 @@ export default function SectionBasics() {
                 ]}
               />
             </GridItem>
-            <GridItem xs={5} sm={5} md={5} justify="center">
+            <GridItem xs={5} sm={5} md={5}>
                 <br/>
                 <img src={image} alt="About Quad Squad "/>
             </GridItem>

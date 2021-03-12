@@ -16,7 +16,7 @@ import Button from "components/CustomButtons/Button.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import styles from "assets/jss/material-kit-react/views/componentsSections/loginStyle.js";
 import {MessageRounded, SendRounded} from "@material-ui/icons";
-import im1 from "assets/img/contact2x.png";
+import MapContainer from "../../../components/Map/MapContainer";
 const useStyles = makeStyles(styles);
 
 export default function SectionContact() {
@@ -24,7 +24,7 @@ export default function SectionContact() {
 
   const classes = useStyles();
   return (
-    <div className={classes.section}>
+    <div id="contact" className={classes.section}>
 
       <div className={classes.container}>
   <h2 className={classes.title}>Contact us</h2>
@@ -91,8 +91,6 @@ export default function SectionContact() {
                     }}
                     inputProps={{
                       type: "textarea",
-                        rowsMax:"20",
-                        cols:"38.5",
                         endAdornment: (
                         <InputAdornment position="end">
                           <MessageRounded className={classes.inputIconsColor} />
@@ -105,7 +103,7 @@ export default function SectionContact() {
 
                 </CardBody>
                 <CardFooter className={classes.cardFooter}>
-                  <Button round color="primary" size="md">
+                  <Button round color="primary">
                     <SendRounded className={classes.icons} /> Send
                   </Button>
                 </CardFooter>
@@ -114,7 +112,7 @@ export default function SectionContact() {
           </GridItem>
 
         <GridItem xs={5} sm={5} md={5}>
-            <img src={im1} alt=""/>
+            <MapContainer/>
         </GridItem>
 
         </GridContainer>

@@ -31,19 +31,26 @@ import work4 from "assets/img/examples/mariya-georgieva.jpg";
 import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
 import styles from "assets/jss/material-kit-react/views/profilePage.js";
+import { useAuth0 } from "@auth0/auth0-react";
 
-const useStyles = makeStyles(styles);
 
 export default function ProfilePage(props) {
   const classes = useStyles();
+    const { user, isAuthenticated, isLoading } = useAuth0();
+
   const { ...rest } = props;
   const imageClasses = classNames(
     classes.imgRaised,
     classes.imgRoundedCircle,
     classes.imgFluid
   );
+  const useStyles = makeStyles(styles);
+  if (isLoading) {
+    return <div>Loading ...</div>;
+  }
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   return (
+          isAuthenticated &&
     <div>
       <Header
         color="transparent"
@@ -64,11 +71,11 @@ export default function ProfilePage(props) {
               <GridItem xs={12} sm={12} md={6}>
                 <div className={classes.profile}>
                   <div>
-                    <img src={profile} alt="..." className={imageClasses} />
+                    <img src={user.picture} alt={user.name} className={imageClasses} />
                   </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title}>Christian Louboutin</h3>
-                    <h6>DESIGNER</h6>
+                    <h3 className={classes.title}>{user.name}</h3>
+                    <h6>{user.email}</h6>
                     <Button justIcon link className={classes.margin5}>
                       <i className={"fab fa-twitter"} />
                     </Button>

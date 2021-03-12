@@ -38,6 +38,8 @@ export default function SectionNavbars() {
                             color="info"
                             tabs={[
                                 {
+
+
                                     tabContent: (
                                         <p className={classes.textCenter}>
                                             Through our app, you can create and configure
@@ -50,7 +52,7 @@ export default function SectionNavbars() {
                                             <ListItem className={classes.listItem}>
 
                                                 <a href="/">
-                                                    <Button color="rose" round sm>
+                                                    <Button color="rose" round>
                                                         <ArrowRightAltOutlined className={classes.icons}/>Start</Button>
                                                 </a>
                                             </ListItem>

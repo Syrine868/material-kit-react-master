@@ -47,7 +47,7 @@ export default function SectionService() {
                                             <ListItem className={classes.listItem}>
 
                                                 <a href="/">
-                                                    <Button color="rose" round sm>
+                                                    <Button color="rose" round >
                                                         <ArrowRightAltOutlined className={classes.icons}/>Start</Button>
                                                 </a>
                                             </ListItem>

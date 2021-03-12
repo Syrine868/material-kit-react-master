@@ -12,6 +12,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Favorite from "@material-ui/icons/Favorite";
 
 import styles from "assets/jss/material-kit-react/components/footerStyle.js";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
 
 const useStyles = makeStyles(styles);
 
@@ -81,7 +82,7 @@ export default function Footer(props) {
           </a>{" "}
           Together we lead better.
         </div>
-      </div>
+      </div> <ScrollToTop/>
     </footer>
   );
 }

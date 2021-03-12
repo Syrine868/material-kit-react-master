@@ -44,7 +44,7 @@ export default function SignUp(props) {
       <Header
         absolute
         color="transparent"
-        brand="GenIF'I"
+        brand="GenIFI"
         rightLinks={<HeaderLinks />}
         {...rest}
       />
@@ -62,7 +62,7 @@ export default function SignUp(props) {
 
               <Card className={classes[cardAnimaton]}>
                   <CardHeader color="primary" className={classes.cardHeader}>
-                    <p>If you don't have an account, <br/><b>please complete this form ...</b></p>
+                    <p>If you don t have an account, <br/><b>please complete this form ...</b></p>
                   </CardHeader>
                   <CardBody>
 
